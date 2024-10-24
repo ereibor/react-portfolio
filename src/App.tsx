@@ -5,7 +5,7 @@ function App() {
     <>
       <div className="flex items-center  justify-center gap-4">
         <h1 className="text-3xl font-bold underline text-red-500 ">
-          Hello world!
+          Hello world !
         </h1>
         <span>
           {GithubIcon()}
