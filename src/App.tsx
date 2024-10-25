@@ -1,3 +1,4 @@
+import Button from "./components/ui/Button";
 import { GithubIcon } from "./helpers/svg";
 
 function App() {
@@ -7,9 +8,10 @@ function App() {
         <h1 className="text-3xl font-bold underline text-red-500 ">
           Hello world !
         </h1>
-        <span>
-          {GithubIcon()}
-        </span>
+        <span>{GithubIcon()}</span>
+      </div>
+      <div className="text-center mt-4">
+        <Button variant="secondary">Click me</Button>
       </div>
     </>
   );
