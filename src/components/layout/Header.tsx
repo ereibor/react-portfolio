@@ -3,10 +3,11 @@ import { useState } from "react";
 const Header = () => {
   const [Toggle, showMenu] = useState(false);
   const [activeNav, setActiveNav] = useState("#home");
+  
 
   return (
-    <header>
-      <nav className="h-[72px] flex items-center justify-between font-medium">
+    <div>
+      <nav className="h-[72px] flex items-center justify-between font-medium text-base">
         <h1 className="uppercase">Tunere Ereibor</h1>
 
         <div>
@@ -40,7 +41,7 @@ const Header = () => {
           </ul>
         </div>
       </nav>
-    </header>
+    </div>
   );
 };
 
