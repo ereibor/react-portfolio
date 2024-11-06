@@ -8,7 +8,7 @@ const Header = () => {
   return (
     <div>
       <nav className="h-[72px] flex items-center justify-between font-medium text-base">
-        <h1 className="uppercase">Tunere Ereibor</h1>
+        <h1 className="uppercase m-auto md:m-0">Tunere Ereibor</h1>
 
         <div>
           <ul className="hidden md:flex gap-8">
