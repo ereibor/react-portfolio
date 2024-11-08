@@ -1,4 +1,5 @@
 import Header from "./components/layout/Header";
+import About from "./components/sections/About";
 import Hero from "./components/sections/Hero";
 
 function App() {
@@ -17,7 +18,9 @@ function App() {
             <Hero />
           </section>
 
-          <section className="py-8">{/* About section */}</section>
+          <section className="py-8">
+            <About />
+          </section>
 
           <section className="py-8">{/* Services section */}</section>
 
@@ -25,10 +28,7 @@ function App() {
         </main>
 
         <footer>
-        <div className="mx-auto md:max-w-4xl px-4">
-            footer
-        
-          </div>
+          <div className="mx-auto md:max-w-4xl px-4">footer</div>
         </footer>
       </div>
     </>
