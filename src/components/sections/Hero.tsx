@@ -6,7 +6,7 @@ const Hero = () => {
     <div className="grid grid-cols-1 md:grid-cols-[116px_repeat(2,1fr)] pt-8 md:pt-22 gap-4 md:gap-2 items-center px-4 md:px-0">
       {/* Social Icons */}
       <div className="hidden md:block p-4">
-        <div className="flex flex-col items-center gap-4">
+        <div className="flex flex-col gap-4">
           {GithubIcon()} 
           {LinkedInIcon()}
         </div>
