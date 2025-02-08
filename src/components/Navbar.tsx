@@ -8,7 +8,7 @@ export const Navbar = ({ menuOpen, setMenuOpen }: { menuOpen: boolean, setMenuOp
     <nav className="fixed top-0 w-full z-40 bg-black/90 backdrop-blur-lg border-b border-white/10 shadow-lg">
       <div className="max-w-5xl mx-auto px-4">
         <div className="flex justify-between items-center h-16">
-          <a href="#home" className="font-mono text-xl font-bold text-gray-300">
+          <a href="#home" className="font-mono text-xl font-bold text-gray-300 ">
             {" "}
             Tunere
           </a>
@@ -23,28 +23,28 @@ export const Navbar = ({ menuOpen, setMenuOpen }: { menuOpen: boolean, setMenuOp
           <div className="hidden md:flex items-center space-x-8">
             <a
               href="#home"
-              className="text-gray-300 hove:text-white transition-colors"
+              className="text-gray-300 hover:text-white border-b-2 border-transparent pb-1 hover:border-b-blue-800 transition-colors"
             >
               {" "}
               Home
             </a>
             <a
               href="#about"
-              className="text-gray-300 hove:text-white transition-colors"
+              className="text-gray-300 hover:text-white border-b-2 border-transparent pb-1 hover:border-b-blue-800 transition-colors"
             >
               {" "}
               About{" "}
             </a>
             <a
               href="#projects"
-              className="text-gray-300 hove:text-white transition-colors"
+              className="text-gray-300 hover:text-white border-b-2 border-transparent pb-1 hover:border-b-blue-800 transition-colors"
             >
               {" "}
               Projects{" "}
             </a>
             <a
               href="#contact"
-              className="text-gray-300 hove:text-white transition-colors"
+              className="text-gray-300 hover:text-white border-b-2 border-transparent pb-1 hover:border-b-blue-800 transition-colors"
             >
               {" "}
               Contact{" "}

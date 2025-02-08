@@ -34,7 +34,7 @@ export const About = () => {
 
           <div className="rounded-xl p-8 border-black border hover:-translate-y-1 transition-all">
             <p className="text-black text-lg mb-6">
-              Passionate developer with expertise in building scalable web
+              Passionate software developer with expertise in building scalable web
               applications and creating innovative solutions.
             </p>
 
