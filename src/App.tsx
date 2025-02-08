@@ -1,35 +1,27 @@
-import Header from "./components/layout/Header";
-import Hero from "./components/sections/Hero";
+import { useState } from "react";
+import { Navbar } from "./components/Navbar";
+import { MobileMenu } from "./components/MobileMenu";
+import { Home } from "./components/sections/Home";
+import { About } from "./components/sections/About";
+import { Projects } from "./components/sections/Projects";
+import "./index.css";
+import { Contact } from "./components/sections/Contact";
 
 function App() {
+ 
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <>
-      <div>
-        <header>
-          <div className="mx-auto md:max-w-4xl px-4">
-            {" "}
-            <Header />
-          </div>
-        </header>
-
-        <main className="mx-auto md:max-w-4xl px-4 mt-20">
-          <section className="py-8">
-            <Hero />
-          </section>
-
-          <section className="py-8">{/* About section */}</section>
-
-          <section className="py-8">{/* Services section */}</section>
-
-          <section className="py-8">{/* Contact section */}</section>
-        </main>
-
-        <footer>
-        <div className="mx-auto md:max-w-4xl px-4">
-            footer
-        
-          </div>
-        </footer>
+       <div
+        className="w-full min-h-screen transition-opacity duration-700"
+      >
+        <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+        <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+        <Home />
+        <About />
+        <Projects />
+        <Contact />
       </div>
     </>
   );
