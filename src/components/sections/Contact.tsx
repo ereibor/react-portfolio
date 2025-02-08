@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { RevealOnScroll } from "../RevealOnScroll";
 import emailjs from "emailjs-com";
+import { toast } from "sonner";
 
 export const Contact = () => {
   const [formData, setFormData] = useState({
@@ -9,33 +10,32 @@ export const Contact = () => {
     message: "",
   });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     emailjs
       .sendForm(
         import.meta.env.VITE_SERVICE_ID,
         import.meta.env.VITE_TEMPLATE_ID,
-        e.target,
+        e.target as HTMLFormElement,
         import.meta.env.VITE_PUBLIC_KEY
       )
       .then((result) => {
-        alert("Message Sent!");
+        toast.success("Message Sent!");
+
         setFormData({ name: "", email: "", message: "" });
       })
-      .catch(() => alert("Oops! Something went wrong. Please try again."));
+      .catch(() => toast.error("Something went wrong!", {
+        style: { backgroundColor: "#fc1c03", color: "white" },
+      }));
   };
 
   return (
-    <section
-      id="contact"
-      className="min-h-screen py-20"
-    >
+    <section id="contact" className="min-h-screen py-20">
       <RevealOnScroll>
-        <div className="px-4 md:w-[30%] m-auto">
-          <h2 className="text-3xl font-bold mb-8  bg-gradient-to-r from-gray-500 to-gray-600 bg-clip-text text-transparent text-center">
-            {" "}
-            Get In Touch
+        <div className="px-4 md:w-[80%] lg:w-[40%] ipadPro:w-[70%] lg:max-w-[900px] m-auto">
+          <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-gray-500 to-gray-600 bg-clip-text text-transparent text-center">
+            Contact Me
           </h2>
           <form className="space-y-6" onSubmit={handleSubmit}>
             <div className="relative">
@@ -83,12 +83,14 @@ export const Contact = () => {
               />
             </div>
 
-            <button
-              type="submit"
-              className="w-full bg-black/85 text-white py-3 px-6 rounded font-medium transition relative overflow-hidden hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59,130,246,0.4)]"
-            >
-              Send Message
-            </button>
+            <div className="flex justify-center">
+              <button
+                type="submit"
+                className=" w-full md:w-1/2 bg-black/85 text-white py-3 px-6 rounded font-medium transition relative overflow-hidden hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59,130,246,0.4)]"
+              >
+                Send Message
+              </button>
+            </div>
           </form>
         </div>
       </RevealOnScroll>
