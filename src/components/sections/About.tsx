@@ -2,14 +2,23 @@ import { RevealOnScroll } from "../RevealOnScroll";
 
 export const About = () => {
   const frontendSkills = [
-    "React",
-    "Vue",
+    "React.js",
+    "Next.js",
+    "Redux Toolkit",
+    "Apollo GraphQL",
     "TypeScript",
     "TailwindCSS",
-    "Svelte",
   ];
 
-  const backendSkills = ["Node.js", "Python", "AWS", "MongoDB", "GraphQL"];
+  const backendSkills = [
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "PostgreSQL",
+    "MySQL",
+    "RESTful APIs",
+    "GraphQL",
+  ];
 
   return (
     <section
@@ -69,12 +78,12 @@ export const About = () => {
               <h3 className="text-xl font-bold mb-4"> 🏫 Education </h3>
               <ul className="list-disc list-inside text-black space-y-2">
                 <li>
-                  <strong> B.S. in Computer Science </strong> - XYZ University
-                  (2016-2020)
-                </li>
-                <li>
-                  Relevant Coursework: Data Structures, Web Development, Cloud
-                  Computing...
+                  <strong>
+                    {" "}
+                    Bachelor of Science (B.S.) in Computer Science and
+                    Information Technology{" "}
+                  </strong>{" "}
+                  - Igbinedion University Okada, Edo State. (2016-2020)
                 </li>
               </ul>
             </div>
@@ -84,23 +93,21 @@ export const About = () => {
                 <div>
                   <h4 className="font-semibold">
                     {" "}
-                    Software Engineer at ABC Corp (2020 - Present){" "}
+                    Software Engineer | DLHO SOLUTIONS (Nov 2024 - Present){" "}
                   </h4>
-                  <p>
-                    Developed and maintained microservices for cloud-based
-                    applications.
-                  </p>
-                </div>
-
-                <div>
-                  <h4 className="font-semibold">
-                    {" "}
-                    Intern at DEF Startups (2019){" "}
-                  </h4>
-                  <p>
-                    Assisted in building front-end components and integration
-                    REST APIs
-                  </p>
+                  <ul className="list-disc list-inside text-black space-y-2">
+                    <li>
+                      Developed and maintained robust full-stack applications
+                      using Node.js, Next.js, GraphQL, TypeScript, and Redux
+                      Toolkit, ensuring high performance, scalability, and
+                      security.
+                    </li>
+                    <li>
+                      Collaborated with cross-functional teams to gather and
+                      analyze requirements design architectures, and implement
+                      end-to-end solutions for different projects.
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>

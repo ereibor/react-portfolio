@@ -32,10 +32,9 @@ export const Contact = () => {
       className="min-h-screen py-20"
     >
       <RevealOnScroll>
-        <div className="px-4 md:w-[30%] m-auto">
-          <h2 className="text-3xl font-bold mb-8  bg-gradient-to-r from-gray-500 to-gray-600 bg-clip-text text-transparent text-center">
-            {" "}
-            Get In Touch
+        <div className="px-4 md:w-[80%] lg:w-[40%] ipadPro:w-[70%] lg:max-w-[900px] m-auto">
+          <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-gray-500 to-gray-600 bg-clip-text text-transparent text-center">
+            Contact Me
           </h2>
           <form className="space-y-6" onSubmit={handleSubmit}>
             <div className="relative">
@@ -83,12 +82,14 @@ export const Contact = () => {
               />
             </div>
 
-            <button
-              type="submit"
-              className="w-full bg-black/85 text-white py-3 px-6 rounded font-medium transition relative overflow-hidden hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59,130,246,0.4)]"
-            >
-              Send Message
-            </button>
+            <div className="flex justify-center">
+              <button
+                type="submit"
+                className=" w-full md:w-1/2 bg-black/85 text-white py-3 px-6 rounded font-medium transition relative overflow-hidden hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59,130,246,0.4)]"
+              >
+                Send Message
+              </button>
+            </div>
           </form>
         </div>
       </RevealOnScroll>
