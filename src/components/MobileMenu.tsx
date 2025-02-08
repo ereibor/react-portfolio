@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+
 
 export const MobileMenu = ({ menuOpen, setMenuOpen }: { menuOpen: boolean, setMenuOpen: React.Dispatch<React.SetStateAction<boolean>> }) => {
   return (

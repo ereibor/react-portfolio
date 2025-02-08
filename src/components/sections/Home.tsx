@@ -1,7 +1,4 @@
 import { GithubIcon, LinkedInIcon } from "../../helpers/svg";
-LinkedInIcon
-import { RevealOnScroll } from "../RevealOnScroll";
-
 
 export const Home = () => {
   return (
@@ -9,38 +6,40 @@ export const Home = () => {
       id="home"
       className="min-h-screen flex items-center justify-center relative"
     >
-      <RevealOnScroll>
-        <div className="text-center z-10 px-4">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-gray-500 to-gray-600 bg-clip-text text-transparent leading-right">
-            Hi, I'm Tunere Ereibor
-          </h1>
+      <div className="text-center z-10 px-4">
+        <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-gray-500 to-gray-600 bg-clip-text text-transparent leading-right">
+          Hi, I'm Tunere Ereibor
+        </h1>
 
-          <p className="text-black text-lg mb-8 max-w-lg mx-auto">
-            I’m a full-stack developer who loves crafting clean, scalable web
-            applications. My goal is to build solutions that offer both
-            exceptional performance and a delightful user experience.
-          </p>
-          <div className="flex justify-center space-x-4">
-            <a
-              href="#projects"
-              className="bg-black/85 text-white py-3 px-6 rounded font-medium transition relative overflow-hidden hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59, 130, 246, 0.4)]"
-            >
-              View Projects
-            </a>
+        <p className="text-black text-lg mb-8 max-w-lg mx-auto">
+          I’m a full-stack developer who loves crafting clean, scalable web
+          applications. My goal is to build solutions that offer both
+          exceptional performance and a delightful user experience.
+        </p>
+        <div className="flex justify-center space-x-4">
+          <a
+            href="#projects"
+            className="bg-black/85 text-white py-3 px-6 rounded font-medium transition relative overflow-hidden hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59, 130, 246, 0.4)]"
+          >
+            View Projects
+          </a>
 
-            <a
-              href="#contact"
-              className="border border-black/85 text-black py-3 px-6 rounded font-medium transition-all duration-200 
+          <a
+            href="#contact"
+            className="border border-black/85 text-black py-3 px-6 rounded font-medium transition-all duration-200 
              hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59, 130, 246, 0.2)] hover:bg-gray-100"
-            >
-              Contact Me
-            </a>
-           
-          </div>
-          <div  className="flex items-center justify-center gap-4 p-4"> <a href="https://github.com/ereibor">{GithubIcon()}</a>  <a href="https://www.linkedin.com/in/tunere-ereibor/">{LinkedInIcon()}</a></div>
-          
+          >
+            Contact Me
+          </a>
         </div>
-      </RevealOnScroll>
+        <div className="flex items-center justify-center gap-4 p-4">
+          {" "}
+          <a href="https://github.com/ereibor">{GithubIcon()}</a>{" "}
+          <a href="https://www.linkedin.com/in/tunere-ereibor/">
+            {LinkedInIcon()}
+          </a>
+        </div>
+      </div>
     </section>
   );
 };
