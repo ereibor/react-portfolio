@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { RevealOnScroll } from "../RevealOnScroll";
 import emailjs from "emailjs-com";
 import { toast } from "sonner";
 
@@ -22,7 +21,7 @@ export const Contact = () => {
         e.target as HTMLFormElement,
         import.meta.env.VITE_PUBLIC_KEY
       )
-      .then((result) => {
+      .then(() => {
         toast.success("Message Sent!");
 
         setFormData({ name: "", email: "", message: "" });
@@ -37,7 +36,6 @@ export const Contact = () => {
 
   return (
     <section id="contact" className="min-h-screen py-20">
-      <RevealOnScroll>
         <div className="px-4 md:w-[80%] lg:w-[40%] ipadPro:w-[70%] lg:max-w-[900px] m-auto">
           <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-gray-500 to-gray-600 bg-clip-text text-transparent text-center">
             Contact Me
@@ -98,7 +96,6 @@ export const Contact = () => {
             </div>
           </form>
         </div>
-      </RevealOnScroll>
     </section>
   );
 };
