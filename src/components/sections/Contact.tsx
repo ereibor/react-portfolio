@@ -4,6 +4,8 @@ import emailjs from "emailjs-com";
 import { toast } from "sonner";
 
 export const Contact = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -12,7 +14,7 @@ export const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
+    setIsSubmitting(true);
     emailjs
       .sendForm(
         import.meta.env.VITE_SERVICE_ID,
@@ -27,7 +29,10 @@ export const Contact = () => {
       })
       .catch(() => toast.error("Something went wrong!", {
         style: { backgroundColor: "#fc1c03", color: "white" },
-      }));
+      }))
+      .finally(() => {
+        setIsSubmitting(false);
+      });
   };
 
   return (
@@ -88,7 +93,7 @@ export const Contact = () => {
                 type="submit"
                 className=" w-full md:w-1/2 bg-black/85 text-white py-3 px-6 rounded font-medium transition relative overflow-hidden hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59,130,246,0.4)]"
               >
-                Send Message
+                 {isSubmitting ? "Sending..." : "Send Message"}
               </button>
             </div>
           </form>
